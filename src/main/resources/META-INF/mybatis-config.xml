@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--开启驼峰命名规则自动转换-->
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true" />
+    </settings>
+
+    <typeAliases>
+        <package name="com.cxytiandi.sharding.po"/>
+    </typeAliases>
+    <mappers>
+        <mapper resource="META-INF/mappers/User.xml"/>
+        <mapper resource="META-INF/mappers/ShareDb.xml"/>
+    </mappers>
+
+
+</configuration>
