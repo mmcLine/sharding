@@ -2,6 +2,7 @@ package com.cxytiandi.sharding.service;
 
 import java.util.List;
 
+import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -30,6 +31,12 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public User findByName(String name) {
 		return userRepository.findByName(name);
+	}
+
+	@Override
+	public List<User> page(Integer page) {
+		PageHelper.startPage(page,5);
+		return userRepository.listPage();
 	}
 
 }

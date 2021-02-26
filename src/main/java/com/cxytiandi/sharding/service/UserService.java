@@ -13,5 +13,7 @@ public interface UserService {
 	User findById(Long id);
 	
 	User findByName(String name);
+
+	List<User> page(Integer page);
 	
 }

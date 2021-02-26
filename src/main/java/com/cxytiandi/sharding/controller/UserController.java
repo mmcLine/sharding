@@ -55,5 +55,11 @@ public class UserController {
 	public Object get(String name) {
 		return userService.findByName(name);
 	}
+
+	@GetMapping("/users/page/{page}")
+	public Object page(@PathVariable Integer page){
+		HintManager.getInstance().setMasterRouteOnly();
+		return userService.page(page);
+	}
 	
 }

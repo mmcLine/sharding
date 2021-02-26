@@ -30,5 +30,9 @@
     <select id="findByName" resultMap="baseResultMap">
         SELECT u.* FROM user u WHERE u.name=#{name,jdbcType=VARCHAR}
     </select>
-    
+
+
+    <select id="listPage" resultMap="baseResultMap">
+        SELECT u.* FROM user u order by id
+    </select>
 </mapper>
